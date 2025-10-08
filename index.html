@@ -9,23 +9,37 @@
             font-family: Arial, sans-serif; 
             line-height: 1.6; 
             margin: 20px; 
-            max-width: 800px; 
-            margin: auto; 
-            background: #f4f9f4; /* Jasnozielone tło dla OZE */
+            background: #f4f9f4;
         }
-        h1, h2 { color: #2e7d32; } /* Zielony kolor dla OZE */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+        }
+        .main-content {
+            grid-column: 2;
+            padding: 20px;
+        }
+        .sidebar {
+            grid-column: 1;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        h1, h2 { color: #2e7d32; }
         ul { list-style-type: disc; padding-left: 20px; }
         hr { border: none; border-top: 1px solid #ccc; margin: 20px 0; }
         img { max-width: 100%; height: auto; margin: 10px 0; }
         .calculator-container {
-            max-width: 600px;
-            margin: 20px auto;
             background: rgba(255, 255, 255, 0.95);
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
         }
-        form { max-width: 600px; margin: auto; }
+        form { margin: 20px 0; }
         label { display: block; margin-top: 15px; font-weight: bold; }
         input, select, textarea { 
             width: 100%; 
@@ -56,114 +70,124 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>OZE Partnerzy - Twój doradca w zielonej energii</h1>
-        <h2>OZE Partnerzy - Twoi eksperci od OZE</h2>
-        <p><strong>Zielona przyszłość z nami – wybierz energię, która się opłaca!</strong></p>
-        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Panele słoneczne na dachu">
-    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Szybkie linki</h3>
+            <ul>
+                <li><a href="#calculator">Kalkulator PV</a></li>
+                <li><a href="#consultation">Darmowa konsultacja</a></li>
+                <li><a href="#about">O nas</a></li>
+            </ul>
+        </aside>
 
-    <section>
-        <p>Witamy serdecznie! Jesteśmy zespołem ekspertów ds. odnawialnych źródeł energii, którzy z pasją pomagają żyć oszczędniej i bardziej ekologicznie.</p>
-        <p>Nasza misja to wspieranie Cię w świadomych decyzjach, które łączą korzyści finansowe z troską o planetę. Każdy krok w stronę zielonej energii to inwestycja w lepszą przyszłość – dla Ciebie i dla środowiska.</p>
-        <img src="https://images.unsplash.com/photo-1606167668584-78701c35f1aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pompa ciepła w instalacji domowej">
-    </section>
+        <main class="main-content">
+            <header>
+                <h1>OZE Partnerzy - Twój doradca w zielonej energii</h1>
+                <h2>OZE Partnerzy - Twoi eksperci od OZE</h2>
+                <p><strong>Zielona przyszłość z nami – wybierz energię, która się opłaca!</strong></p>
+                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Panele słoneczne na dachu">
+            </header>
 
-    <section>
-        <h2>O Nas</h2>
-        <p>Jesteśmy zespołem doradców ds. odnawialnych źródeł energii (OZE), który działa w oparciu o wieloletnie doświadczenie praktyczne. Stawiamy na konkrety i przejrzystość, bo wierzymy, że zielona energia to nie tylko wybór dla środowiska, ale też rozsądna decyzja finansowa.</p>
-        <p>Od lat wspieramy klientów indywidualnych i biznesowych w maksymalizacji korzyści z paneli słonecznych, pomp ciepła, magazynów energii oraz systemów zarządzania zużyciem. Znamy rynek OZE od podszewki – nie z książek, ale z codziennej pracy w terenie.</p>
-        <p>Naszym celem nie jest sprzedaż za wszelką cenę, ale rzetelne doradztwo, które przynosi realne oszczędności i szybki zwrot z inwestycji. Jeśli szukasz partnera, który zna branżę i stawia na transparentność, to jesteś we właściwym miejscu.</p>
-        <img src="https://images.unsplash.com/photo-1508672019048-805c876b26ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Zespół ekspertów OZE">
-    </section>
+            <section>
+                <p>Witamy serdecznie! Jesteśmy zespołem ekspertów ds. odnawialnych źródeł energii, którzy z pasją pomagają żyć oszczędniej i bardziej ekologicznie.</p>
+                <p>Nasza misja to wspieranie Cię w świadomych decyzjach, które łączą korzyści finansowe z troską o planetę. Każdy krok w stronę zielonej energii to inwestycja w lepszą przyszłość – dla Ciebie i dla środowiska.</p>
+                <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="System odnawialnej energii w domu">
+            </section>
 
-    <section>
-        <h2>Co oferujemy</h2>
-        <p>To nie jest kolejna „gotowa paczka z fotowoltaiką”. To oferta dla tych, którzy chcą wiedzieć, za co płacą – i dlaczego to się opłaca. Bez ściemy, bez obiecywania gruszek na wierzbie. Z konkretami.</p>
-        <p>Nie jesteśmy handlowcami wciskającymi garnki ani tajemniczymi konsultantami, którzy „coś załatwiają”. Siadamy z Tobą do stołu (nawet zdalnie) i mówimy, jak jest – z wyliczeniami, a nie z hasłami.</p>
+            <section id="about">
+                <h2>O Nas</h2>
+                <p>Jesteśmy zespołem doradców ds. odnawialnych źródeł energii (OZE), który działa w oparciu o wieloletnie doświadczenie praktyczne. Stawiamy na konkrety i przejrzystość, bo wierzymy, że zielona energia to nie tylko wybór dla środowiska, ale też rozsądna decyzja finansowa.</p>
+                <p>Od lat wspieramy klientów indywidualnych i biznesowych w maksymalizacji korzyści z paneli słonecznych, pomp ciepła, magazynów energii oraz systemów zarządzania zużyciem. Znamy rynek OZE od podszewki – nie z książek, ale z codziennej pracy w terenie.</p>
+                <p>Naszym celem nie jest sprzedaż za wszelką cenę, ale rzetelne doradztwo, które przynosi realne oszczędności i szybki zwrot z inwestycji. Jeśli szukasz partnera, który zna branżę i stawia na transparentność, to jesteś we właściwym miejscu.</p>
+                <img src="https://images.unsplash.com/photo-1508672019048-805c876b26ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Zespół ekspertów OZE">
+            </section>
 
-        <h3>Co konkretnie robimy?</h3>
-        <ul>
-            <li>Analiza opłacalności: Sprawdzamy na zimno, czy OZE to dla Ciebie strzał w dziesiątkę, czy jednak nie warto. Jeśli się nie opłaca – powiemy wprost. Jeśli się opłaca – pokażemy, ile zaoszczędzisz.</li>
-            <li>Dobór instalacji: Nie każdy potrzebuje 10 kWp na dachu, tak jak nie każdy wygląda dobrze w garniturze z wystawy. Projektujemy rozwiązania szyte na miarę: moc, technologia, konfiguracja.</li>
-            <li>Opieka po montażu: Nie znikamy, gdy tylko podpiszesz umowę. Jesteśmy z Tobą po instalacji – jako wsparcie techniczne, głos rozsądku albo przypomnienie, że nie wszystko trzeba robić samemu.</li>
-            <li>Pompy ciepła, magazyny energii, zarządzanie zużyciem, bilansowanie energii: Proponujemy tylko to, co ma sens. Rozmowa zaczyna się od „czy warto?”, a nie od „mamy promocję”.</li>
-        </ul>
-        <img src="https://images.unsplash.com/photo-1567538096630-e0cac0af2f7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Magazyn energii i panele słoneczne">
-    </section>
+            <section>
+                <h2>Co oferujemy</h2>
+                <p>To nie jest kolejna „gotowa paczka z fotowoltaiką”. To oferta dla tych, którzy chcą wiedzieć, za co płacą – i dlaczego to się opłaca. Bez ściemy, bez obiecywania gruszek na wierzbie. Z konkretami.</p>
+                <p>Nie jesteśmy handlowcami wciskającymi garnki ani tajemniczymi konsultantami, którzy „coś załatwiają”. Siadamy z Tobą do stołu (nawet zdalnie) i mówimy, jak jest – z wyliczeniami, a nie z hasłami.</p>
 
-    <section>
-        <h2>Dla kogo?</h2>
-        <ul>
-            <li>Dla właścicieli domów, mieszkań, gospodarstw – z kominem czy z kompostownikiem.</li>
-            <li>Dla przedsiębiorców, którzy chcą ciąć koszty energii.</li>
-            <li>Dla każdego, kto nie lubi być nabierany przy inwestycjach.</li>
-        </ul>
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba02777834?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Przedsiębiorca z instalacją OZE">
-    </section>
+                <h3>Co konkretnie robimy?</h3>
+                <ul>
+                    <li>Analiza opłacalności: Sprawdzamy na zimno, czy OZE to dla Ciebie strzał w dziesiątkę, czy jednak nie warto. Jeśli się nie opłaca – powiemy wprost. Jeśli się opłaca – pokażemy, ile zaoszczędzisz.</li>
+                    <li>Dobór instalacji: Nie każdy potrzebuje 10 kWp na dachu, tak jak nie każdy wygląda dobrze w garniturze z wystawy. Projektujemy rozwiązania szyte na miarę: moc, technologia, konfiguracja.</li>
+                    <li>Opieka po montażu: Nie znikamy, gdy tylko podpiszesz umowę. Jesteśmy z Tobą po instalacji – jako wsparcie techniczne, głos rozsądku albo przypomnienie, że nie wszystko trzeba robić samemu.</li>
+                    <li>Pompy ciepła, magazyny energii, zarządzanie zużyciem, bilansowanie energii: Proponujemy tylko to, co ma sens. Rozmowa zaczyna się od „czy warto?”, a nie od „mamy promocję”.</li>
+                </ul>
+                <img src="https://images.unsplash.com/photo-1567538096630-e0cac0af2f7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Magazyn energii i panele słoneczne">
+            </section>
 
-    <section>
-        <h2>Kalkulator Instalacji PV</h2>
-        <p style="text-align: center;">Oblicz swoją instalację fotowoltaiczną i sprawdź, jakie rozwiązanie będzie dla Ciebie najlepsze!</p>
-        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Panele słoneczne w kalkulatorze PV">
-        <div class="calculator-container">
-            <label>Roczne zużycie energii [kWh]</label>
-            <input type="number" id="zuzycie" placeholder="np. 4000">
+            <section>
+                <h2>Dla kogo?</h2>
+                <ul>
+                    <li>Dla właścicieli domów, mieszkań, gospodarstw – z kominem czy z kompostownikiem.</li>
+                    <li>Dla przedsiębiorców, którzy chcą ciąć koszty energii.</li>
+                    <li>Dla każdego, kto nie lubi być nabierany przy inwestycjach.</li>
+                </ul>
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba02777834?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Przedsiębiorca z instalacją OZE">
+            </section>
 
-            <label>Wybór paneli [Wp]</label>
-            <select id="panel">
-                <option value="460">460</option>
-                <option value="480">480</option>
-            </select>
+            <section id="calculator">
+                <h2>Kalkulator Instalacji PV</h2>
+                <p style="text-align: center;">Oblicz swoją instalację fotowoltaiczną i sprawdź, jakie rozwiązanie będzie dla Ciebie najlepsze!</p>
+                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Panele słoneczne w kalkulatorze PV">
+                <div class="calculator-container">
+                    <label>Roczne zużycie energii [kWh]</label>
+                    <input type="number" id="zuzycie" placeholder="np. 4000">
 
-            <label>Orientacja dachu</label>
-            <select id="orientacja">
-                <option value="0.95">Południe</option>
-                <option value="0.9">Wschód-Zachód</option>
-            </select>
+                    <label>Wybór paneli [Wp]</label>
+                    <select id="panel">
+                        <option value="450">450</option>
+                        <option value="480">480</option>
+                    </select>
 
-            <button onclick="oblicz()">OBLICZ</button>
+                    <label>Orientacja dachu</label>
+                    <select id="orientacja">
+                        <option value="0.95">Południe</option>
+                        <option value="0.9">Wschód-Zachód</option>
+                    </select>
 
-            <div class="result" id="wynik"></div>
-        </div>
-    </section>
+                    <button onclick="oblicz()">OBLICZ</button>
 
-    <section>
-        <h2>Umów się na darmową konsultację z naszym ekspertem</h2>
-        <p>Skorzystaj z bezpłatnej konsultacji OZE Partnerzy. Nasz ekspert oceni, czy inwestycja się opłaca, wyliczy oszczędności i przedstawi opcje finansowania. Odpowiemy w ciągu 24 godzin.</p>
-        <form action="https://formspree.io/f/xrbyayoy" method="POST">
-            <label for="imie">Imię:</label>
-            <input type="text" id="imie" name="imie" required>
+                    <div class="result" id="wynik"></div>
+                </div>
+            </section>
 
-            <label for="nazwisko">Nazwisko:</label>
-            <input type="text" id="nazwisko" name="nazwisko" required>
+            <section id="consultation">
+                <h2>Umów się na darmową konsultację z naszym ekspertem</h2>
+                <p>Skorzystaj z bezpłatnej konsultacji OZE Partnerzy. Nasz ekspert oceni, czy inwestycja się opłaca, wyliczy oszczędności i przedstawi opcje finansowania. Odpowiemy w ciągu 48 godzin.</p>
+                <form action="mailto:partnerzyoze@gmail.com" method="POST" enctype="text/plain">
+                    <label for="imie">Imię:</label>
+                    <input type="text" id="imie" name="imie" required>
 
-            <label for="email">Adres email:</label>
-            <input type="email" id="email" name="email" required>
+                    <label for="nazwisko">Nazwisko:</label>
+                    <input type="text" id="nazwisko" name="nazwisko" required>
 
-            <label for="telefon">Numer telefonu (opcjonalnie):</label>
-            <input type="tel" id="telefon" name="telefon">
+                    <label for="email">Adres email:</label>
+                    <input type="email" id="email" name="email" required>
 
-            <label for="zainteresowany">Czym jesteś zainteresowany?</label>
-            <select id="zainteresowany" name="zainteresowany">
-                <option value="fotowoltaika">Fotowoltaika</option>
-                <option value="pompy_ciepla">Pompy ciepła</option>
-                <option value="klimatyzacja">Klimatyzacja</option>
-                <option value="powloka_termoizolacyjna">Powłoka termoizolacyjna</option>
-                <option value="magazyn_energii">Magazyn energii</option>
-                <option value="turbina_wiatrowa">Turbina wiatrowa</option>
-                <option value="carport">Carport</option>
-            </select>
+                    <label for="telefon">Numer telefonu (opcjonalnie):</label>
+                    <input type="tel" id="telefon" name="telefon">
 
-            <label for="dodatkowe">Dodatkowe informacje:</label>
-            <textarea id="dodatkowe" name="dodatkowe" rows="5"></textarea>
+                    <label for="zainteresowany">Czym jesteś zainteresowany?</label>
+                    <select id="zainteresowany" name="zainteresowany">
+                        <option value="fotowoltaika">Fotowoltaika</option>
+                        <option value="pompy_ciepla">Pompy ciepła</option>
+                        <option value="klimatyzacja">Klimatyzacja</option>
+                        <option value="powloka_termoizolacyjna">Powłoka termoizolacyjna</option>
+                        <option value="magazyn_energii">Magazyn energii</option>
+                        <option value="turbina_wiatrowa">Turbina wiatrowa</option>
+                        <option value="carport">Carport</option>
+                    </select>
 
-            <label for="pytania">Dodatkowe pytania:</label>
-            <textarea id="pytania" name="pytania" rows="5"></textarea>
+                    <label for="dodatkowe">Dodatkowe informacje:</label>
+                    <textarea id="dodatkowe" name="dodatkowe" rows="5"></textarea>
 
-            <button type="submit">Wyślij</button>
-        </form>
-    </section>
+                    <button type="submit">Wyślij</button>
+                </form>
+            </section>
+        </main>
+    </div>
 
     <hr>
     <footer>
@@ -227,4 +251,3 @@
     </script>
 </body>
 </html>
-
